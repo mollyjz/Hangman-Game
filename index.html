@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" url="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" url="./assets/css/reset.css">
-    <script src="./assets/javascript/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <h2>Press any key to get started!</h2>
+    <div id="main">
+    <h2 id="title">Press any key to get started!</h2>
     <p>
         Wins:
         <span id="wins"></span>
     </p>
-
+    <div id="current-word">
     <p>
         Current word
     </p>
@@ -26,17 +27,19 @@
         <span id="blank5">_&nbsp;</span>
         <span id="blank6">_&nbsp;</span>
     </p>
+    </div>
 
-    <p>
+    <p id="remaining">
         Number of guesses remaining:
         <span id="guesses-left"></span>
     </p>
 
     <p>
         Letters guessed:
-        <span id="letters-guessed"></span>
+        <div id="letters-guessed"></div>
     </p>
 
     <div id="game-over"></div>
+</div>
 </body>
 </html>

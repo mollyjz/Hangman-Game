@@ -1,11 +1,38 @@
-#guesses-left {
-
+body {
+    color: sandybrown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url("../images/cheetah.jpeg");
+    background-repeat: no-repeat;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    margin: 40px auto;
+    width: 50%;
+    border: 1px solid sandybrown;
 }
 
-#letters-guessed {
-
+#main {
+    background: brown;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-bottom: 70px;
 }
 
-#blanks {
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
 
+#current-word {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin-bottom: 20px;
+}
+
+#remaining {
+    margin-bottom: 20px;
 }
