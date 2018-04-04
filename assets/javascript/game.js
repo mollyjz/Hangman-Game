@@ -75,18 +75,14 @@ function mainGame () {
         return false; //if not a letter, don't print
     } else if (lettersGuessed.indexOf(guess) < 0) { //otherwise, if letter, if that letter not guessed before this round, push to "letters guessed" array
         lettersGuessed.push(guess);
-    } if (selectedWord.indexOf(guess) > -1)  { //if guess is correct...
+    } if (selectedWord.indexOf(guess) > -1) { //if guess is correct...
         for (var i = 0; i < selectedWord.length; i++) { //starting with first letter in word, until you get to the last letter, cycle through the letters one by one. display letter you're currently on.
-            blank[i] = selectedWord.charAt(i); //set blank array variable to the selected letter; the blank corresponding to the letter you're on stores the letter you're at
-    } else { //if guess is incorrect...
+            blank[i] = selectedWord.charAt(i);
+     } //set blank array variable to the selected letter; the blank corresponding to the letter you're on stores the letter you're at
+    } else if (selectedWord.indexOf(guess) = -1) { //if guess is incorrect...
         document.getElementById("letters-guessed").innerHTML = guess; // print letter to "letters guessed"
         guessesLeft--; //subtract 1 from "guesses left"
-    }
-}
-
-
-function isGameOver() {     //check to see if round should end
-    if (blanksLeft < 1) {
+    } if (blanksLeft < 1) {
         document.getElementById("game-over").innerHTML = "Great job--you won!! Let's play again"; // win
         wins++;
         document.getElementById("wins").innerHTML = wins;
@@ -96,6 +92,8 @@ function isGameOver() {     //check to see if round should end
         restartGame();
     }
 }
+
+
 
 //to start game for the first time when any key is pressed
 function initializeGame() {  
@@ -110,6 +108,7 @@ function initializeGame() {
 
 function restartGame() {    //to restart game after win or loss
     guessesLeft = 12;
+    console.log (lettersGuessed);
     blanksLeft = 7;
     lettersGuessed = [];
     generateWord();
@@ -123,10 +122,8 @@ function restartGame() {    //to restart game after win or loss
 // CALLING FUNCTIONS
 
 document.onload = initializeGame;//start game when user presses any key
-
 document.onkeyup = function(event) { //once game has started, any time a key is pressed... 
-   console.log(event.key)
-    mainGame; //main game function
-   // if (selectedWord.indexOf(guess) > -1) { //if letter guessed appears in selected word... ////starts over
-        isGameOver; //check to see if game is over and restart if so
-    }
+   mainGame;
+   console.log(lettersGuessed)
+ } //main game function 
+    // if (selectedWord.indexOf(guess) > -1) { //if letter guessed appears in selected word... ////starts over    }
